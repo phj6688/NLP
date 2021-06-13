@@ -24,6 +24,6 @@ def url_topic_grabber(topic,url,start,end):
     return df.info()
 
 
-politik_urls = url_topic_grabber('Politik','https://www.spiegel.de/politik/',1,200)
-sport_urls = url_topic_grabber('Sport','https://www.spiegel.de/sport/',1,200)
-kultur_urls = url_topic_grabber('Kultur','https://www.spiegel.de/kultur/',1,200)
+politik_urls = url_topic_grabber('Politik','https://www.spiegel.de/politik/',1,150)
+sport_urls = url_topic_grabber('Sport','https://www.spiegel.de/sport/',1,150)
+kultur_urls = url_topic_grabber('Kultur','https://www.spiegel.de/kultur/',1,150)

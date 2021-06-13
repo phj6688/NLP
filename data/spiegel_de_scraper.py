@@ -6,25 +6,9 @@ from itertools import zip_longest, chain
 from time import sleep
 import snoop
 
-# url grabber
-@snoop
-def url_topic_grabber(url,start,end):
-    urls = []
-    for i in range(start,end):
-        url_ = f'{url}p{i}'
-        request = requests.get(url_).text
-        soup = bs(request,'lxml')
-        href = soup.find_all('a',class_ = 'text-black block')
-        for i in href:
-            urls.append(i.get_attribute_list('href'))
-    urls = set(list(chain.from_iterable(urls)))
-    print('urls list done!')
-    return list(urls)
-
-
 
 @snoop
-def grab_details(urls, topic):
+def grab_details(file, topic):
     day = []
     month = []
     year = []
@@ -33,8 +17,12 @@ def grab_details(urls, topic):
     kurz_text = []
     haupt_text = []
     
+
+    urls = pd.read_csv(f'{topic}_urls.csv')
+
+
     count = 0
-    for url in urls:
+    for url in urls['0']:
         try:
             request = requests.get(url).text
             soup = bs(request, 'lxml')
@@ -47,44 +35,28 @@ def grab_details(urls, topic):
             count +=1
             if count % 100 == 0:
                 print(f'{count} pages done!')
-            elif count % 500 == 0:
-                sleep(1200)
+            if count % 500 == 0:
+                sleep(1800)
             category.append(topic)
         except:
             pass
     print(f'last page done! {count}')
     
+
     list_of_results = [day, month, year, category, article_, kurz_text, haupt_text]
     export_data = zip_longest(*list_of_results, fillvalue = '')
     df = pd.DataFrame(export_data,columns=['day', 'month', 'year', 'category', 'article', 'kurz_text', 'haupt_text'])
-    df.to_csv(f'{topic}.csv', index = True, index_label='Line_ID', header = True )
-    
-    
-    return df
+    df.to_csv(f'{topic}_normal.csv', index = True, index_label='Line_ID', header = True )
 
 
 
-# get the urls
-politik_urls = url_topic_grabber('https://www.spiegel.de/politik/',1,200)
-sport_urls = url_topic_grabber('https://www.spiegel.de/sport/',1,200)
-kultur_urls = url_topic_grabber('https://www.spiegel.de/kultur/',1,200)
-# save to csv
-df_politik_urls = pd.DataFrame(politik_urls)
-df_politik_urls.to_csv('politik_urls.csv')
-
-df_sport_urls = pd.DataFrame(sport_urls)
-df_sport_urls.to_csv('sport_urls.csv')
-
-df_kultur_urls = pd.DataFrame(kultur_urls)
-df_kultur_urls.to_csv('kultur_urls.csv')
-''''
 # run the function through all three url list
 
 politik = grab_details(politik_urls,'Politik')
 sport = grab_details(sport_urls,'Sport')
 kultur = grab_details(kultur_urls,'Kultur')
 
-''''
+
 
 
 
