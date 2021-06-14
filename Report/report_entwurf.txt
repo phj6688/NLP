@@ -1,0 +1,106 @@
+siehe overleaf für template
+
+1 Introduction
+
+The concept of simple language [cit. Simple language ^1] is the solution
+for creating accessible text for people with lower capabilities
+of reading complex texts. Its used by news sites to provide
+valuable information to people regardless of their literacy[cit. nachrichtenleicht.de].
+
+In this work we look at German simple language, or "Leichte Sprache". We are examining
+the implications simple language has on natural language processing. Simple language
+is distinct from conventional text, especially so in news context, where the standard
+of text usually is fairly high. Simple language aims to maintain high readibility even
+on complex topics.
+
+For this we focus on two main experiments. One, do the common features used when classifying
+news articles work at a comparable level when applied to simple language, or can we tune the features to
+obtain better results in classifying it. And two, is it worth it to train a classifier on simple
+language specifically, if we intend to use it for simple language, or does training on conventional
+text give a similar result.
+
+The motivation for this is to figure out if there is a benefit in considering simple language
+when designing a classifier, or if it is close enough to conventional language to simply treat it as such.
+
+
+2 Data
+We are using datasets we gathered ourselves. We use news articles, as there is plenty of available
+data in simple language, and it offers itself nicely for labelling and classifying,
+by using the general category as a label. We take our data from nachrichtenleicht.de [cit.] for simple
+language and from spiegel.de [cit.] for our conventional language.
+The readability of the texts in simple language is around ___, while the conventional texts have
+an average readability of ____.
+For our supervised training we require labels, but in the case of the simple language, these are provided
+already, since each article is categorized by the source under "culture", "sport", "news" or for our purposes
+"politics" and "miscellaneous". We will focus on the former three categories, as that gives us a more clear
+distinction for each label. For the conventional language we take articles from sources that focus
+entirely on a specific category, with ___ being our source for culture, ___ for sport and ___ for politics.
+
+		An overview of the resulting datasets is provided in graphic x [graphic cit.]
+alt:	The resulting datasets look as follows [table cit.]
+
+Tabelle: zwei große Spalten, leicht und normal, jeweils unterteilt in gesamt und pro label
+Zeilen:
+	- Artikel
+	- Wörter (insgesamt)
+	- Vokabluar (unique words)
+	- durchschnittliche Länge des Artikels
+	- durchschnittliche Länge eines Satzes
+	- Durchschnittliche Reading ease
+
+
+Leichte Sprache:
+
+
+
+716642 words (textstat package lexicon)
+47602 unique types
+
+average reading ease : 62.77
+
+Number of articles labelled "culture": 1304
+Number of articles labelled "news": 2020
+Number of articles labelled "sport": 1230
+Total number of articles: 4554
+
+
+A few aspects to consider are 
+	- unbalanced data
+	- different vocabularies
+
+
+
+
+
+3 Approach
+
+3.1 General
+[in case of unbalanced data, mention is here]
+As the volume of data for the simple language is quite small,
+we will be using cross validation for testing. In case we intend to tune our model,
+we hold out 10% of the data as final testing data after tuning.
+We use a k [decide how many] fold standard cross validation.
+
+We observe the standard metrics for our models, accuracy, precision and recall, and the f1 score.
+We use these standard metrics since our goal is not to determine the actual quality of our models,
+but to compare them against one another. Therefore having a broader overview of general performance
+should be enough to indicate a trend.
+
+3.2 Which features are the best
+
+	In this experiment we will use ___ classifier. Since we intend to tune our models,
+	we hold out a random sample of 10% of our data.
+	
+	- Which standard features are we comparing
+	- How are we adapting these features with custom features
+	- Are we using entirely new custom ideas for features?
+		- using readability as a feature
+
+3.3 Is it worth to train on simple
+
+
+
+
+
+
+^1 source for what simple language is
