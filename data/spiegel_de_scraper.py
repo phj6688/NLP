@@ -7,6 +7,8 @@ from time import sleep
 import snoop
 
 
+
+# grab the details for every url that already collected
 @snoop
 def grab_details(file, topic):
     day = []
@@ -20,7 +22,7 @@ def grab_details(file, topic):
 
     urls = pd.read_csv(f'{topic}_urls.csv')
 
-
+    # use Beautifulsoup to scrape the pages
     count = 0
     for url in urls['0']:
         try:
@@ -42,7 +44,7 @@ def grab_details(file, topic):
             pass
     print(f'last page done! {count}')
     
-
+    # return the data as a Dataframe and save it to csv format
     list_of_results = [day, month, year, category, article_, kurz_text, haupt_text]
     export_data = zip_longest(*list_of_results, fillvalue = '')
     df = pd.DataFrame(export_data,columns=['day', 'month', 'year', 'category', 'article', 'kurz_text', 'haupt_text'])
@@ -55,15 +57,3 @@ def grab_details(file, topic):
 politik = grab_details(politik_urls,'Politik')
 sport = grab_details(sport_urls,'Sport')
 kultur = grab_details(kultur_urls,'Kultur')
-
-
-
-
-
-
-#list_of_results = [day, month, year, category, article_, kurz_text, haupt_text]
-#export_data = zip_longest(*list_of_results, fillvalue = '')
-
-#df = pd.DataFrame(export_data,columns=['day', 'month', 'year', 'category', 'article', 'kurz_text', 'haupt_text'])
-#df.to_csv(f'{}.csv', index = True, index_label='Line_ID', header = True )
-
