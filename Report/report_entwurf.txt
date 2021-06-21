@@ -28,45 +28,23 @@ We are using datasets we gathered ourselves. We use news articles, as there is p
 data in simple language, and it offers itself nicely for labelling and classifying,
 by using the general category as a label. We take our data from nachrichtenleicht.de [cit.] for simple
 language and from spiegel.de [cit.] for our conventional language.
-The readability of the texts in simple language is around ___, while the conventional texts have
-an average readability of ____.
-For our supervised training we require labels, but in the case of the simple language, these are provided
+For our supervised training we require labels, but we are able to easily obtain them, as they are provided
 already, since each article is categorized by the source under "culture", "sport", "news" or for our purposes
 "politics" and "miscellaneous". We will focus on the former three categories, as that gives us a more clear
-distinction for each label. For the conventional language we take articles from sources that focus
-entirely on a specific category, with ___ being our source for culture, ___ for sport and ___ for politics.
+distinction for each label.
 
-		An overview of the resulting datasets is provided in graphic x [graphic cit.]
-alt:	The resulting datasets look as follows [table cit.]
-
-Tabelle: zwei große Spalten, leicht und normal, jeweils unterteilt in gesamt und pro label
-Zeilen:
-	- Artikel
-	- Wörter (insgesamt)
-	- Vokabluar (unique words)
-	- durchschnittliche Länge des Artikels
-	- durchschnittliche Länge eines Satzes
-	- Durchschnittliche Reading ease
+We cleaned the data, formatting each article into a single line, with the document consisting of
+the headline, followed by a short description of the article, and then the body of the article itself.
+Aftet cleaning we gathered some metadata, to give a better overview of our dataset, and to be able
+to judge some of the results accordingly. The result can be seen in [table 1]
 
 
-Leichte Sprache:
+Tabelle: siehe overleaf
 
-
-
-716642 words (textstat package lexicon)
-47602 unique types
-
-average reading ease : 62.77
-
-Number of articles labelled "culture": 1304
-Number of articles labelled "news": 2020
-Number of articles labelled "sport": 1230
-Total number of articles: 4554
-
-
-A few aspects to consider are 
-	- unbalanced data
-	- different vocabularies
+Two aspects to point out are the clear and significant difference in the reading ease, indicating
+that we chose data that is far apart in its style and language level, and is thus fit for researching
+our questions. The other point to consider is the comparable size of the labels, meaning we do not
+need to pay too much attention to possible problems arising from unbalanced data.
 
 
 
@@ -97,6 +75,18 @@ should be enough to indicate a trend.
 		- using readability as a feature
 
 3.3 Is it worth to train on simple
+
+
+4 Results
+
+4.1 features
+
+4.2 worth it to train
+
+
+5 Conclusion
+
+6 Outlook and discussion
 
 
 
