@@ -1,0 +1,25 @@
+Trained on: non-Leichte Sprache
+Classifier: Multi-Layer Perceptron
+Vectorization: tfidf
+Prediction on test set (non-Leichte Sprache)
+              precision    recall  f1-score   support
+
+      Kultur       0.90      0.93      0.91       708
+ Nachrichten       0.94      0.92      0.93       655
+       Sport       0.98      0.96      0.97       812
+
+    accuracy                           0.94      2175
+   macro avg       0.94      0.94      0.94      2175
+weighted avg       0.94      0.94      0.94      2175
+
+Prediction on Leichte Sprache
+              precision    recall  f1-score   support
+
+      Kultur       0.74      0.86      0.80      1304
+ Nachrichten       0.89      0.83      0.86      2020
+       Sport       0.98      0.93      0.96      1230
+
+    accuracy                           0.87      4554
+   macro avg       0.87      0.87      0.87      4554
+weighted avg       0.87      0.87      0.87      4554
+
