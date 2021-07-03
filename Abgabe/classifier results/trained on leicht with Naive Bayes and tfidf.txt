@@ -1,0 +1,25 @@
+Trained on: Leichte Sprache
+Classifier: Naive Bayes
+Vectorization: tfidf
+Prediction on test set (Leichte Sprache)
+              precision    recall  f1-score   support
+
+      Kultur       0.83      0.80      0.81       397
+ Nachrichten       0.85      0.91      0.88       595
+       Sport       0.96      0.90      0.93       375
+
+    accuracy                           0.87      1367
+   macro avg       0.88      0.87      0.87      1367
+weighted avg       0.88      0.87      0.87      1367
+
+Prediction on non-Leichte Sprache
+              precision    recall  f1-score   support
+
+      Kultur       0.70      0.68      0.69      2357
+ Nachrichten       0.66      0.81      0.73      2233
+       Sport       0.93      0.78      0.85      2659
+
+    accuracy                           0.76      7249
+   macro avg       0.76      0.76      0.76      7249
+weighted avg       0.77      0.76      0.76      7249
+

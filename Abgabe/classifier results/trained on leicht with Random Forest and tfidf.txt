@@ -1,0 +1,25 @@
+Trained on: Leichte Sprache
+Classifier: Random Forest
+Vectorization: tfidf
+Prediction on test set (Leichte Sprache)
+              precision    recall  f1-score   support
+
+      Kultur       0.96      0.68      0.80       397
+ Nachrichten       0.79      0.97      0.87       595
+       Sport       0.99      0.93      0.96       375
+
+    accuracy                           0.88      1367
+   macro avg       0.91      0.86      0.88      1367
+weighted avg       0.89      0.88      0.87      1367
+
+Prediction on non-Leichte Sprache
+              precision    recall  f1-score   support
+
+      Kultur       0.56      0.80      0.66      2357
+ Nachrichten       0.74      0.58      0.65      2233
+       Sport       0.93      0.74      0.82      2659
+
+    accuracy                           0.71      7249
+   macro avg       0.74      0.71      0.71      7249
+weighted avg       0.75      0.71      0.72      7249
+

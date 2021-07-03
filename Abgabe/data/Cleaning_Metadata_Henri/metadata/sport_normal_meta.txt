@@ -1,0 +1,9 @@
+Number of articles labelled "culture": 0
+Number of articles labelled "news": 0
+Number of articles labelled "sport": 2659
+Total number of articles: 2659
+Number of unique words:247664
+average flesch reading ease of our articles:46.34756675441888
+average length of an article (words):93.14178262504701
+Number of types in the collection:37874
+sport: average length of an article (words):93.14178262504701

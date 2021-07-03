@@ -1,0 +1,20 @@
+=== NON-LEICHTE SPRACHE ===
+Was Nachrichten, predicted Nachrichten 603
+Was Nachrichten, predicted Kultur 47
+Was Nachrichten, predicted Sport 5
+Was Kultur, predicted Nachrichten 35
+Was Kultur, predicted Kultur 659
+Was Kultur, predicted Sport 14
+Was Sport, predicted Nachrichten 5
+Was Sport, predicted Kultur 28
+Was Sport, predicted Sport 779
+=== LEICHTE SPRACHE ===
+Was Nachrichten, predicted Nachrichten 1667
+Was Nachrichten, predicted Kultur 342
+Was Nachrichten, predicted Sport 11
+Was Kultur, predicted Nachrichten 168
+Was Kultur, predicted Kultur 1125
+Was Kultur, predicted Sport 11
+Was Sport, predicted Nachrichten 35
+Was Sport, predicted Kultur 45
+Was Sport, predicted Sport 1150

@@ -1,0 +1,19 @@
+Number of articles labelled "culture": 0
+Number of articles labelled "news": 0
+Number of articles labelled "sport": 0
+Total number of articles: 0
+Number of unique words:200674
+average flesch reading ease of our articles:33.060528437080166
+average length of an article (words):89.86744290192566
+Number of types in the collection:33140
+Number of articles labelled "culture": 1304
+Number of articles labelled "news": 2020
+Number of articles labelled "sport": 1230
+Total number of articles: 4554
+Number of unique words:716642
+average flesch reading ease of our articles:62.76925779534482
+average length of an article (words):157.36539306104524
+Number of types in the collection:47602
+culture: average length of an article (words):150.82898773006136
+sport: average length of an article (words):137.24471544715448
+politics: average length of an article (words):173.83663366336634

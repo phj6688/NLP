@@ -1,0 +1,14 @@
+Trained on: Mixed
+Classifier: Random Forest
+Vectorization: count
+Prediction on test set (only Leichte Sprache)
+              precision    recall  f1-score   support
+
+      Kultur       0.94      0.65      0.77       536
+ Nachrichten       0.78      0.99      0.87       790
+       Sport       0.99      0.91      0.95       497
+
+    accuracy                           0.87      1823
+   macro avg       0.91      0.85      0.86      1823
+weighted avg       0.89      0.87      0.86      1823
+
